@@ -1,0 +1,189 @@
+Xshell 7 (Build 0144)
+Copyright (c) 2020 NetSarang Computer, Inc. All rights reserved.
+
+Type `help' to learn how to use Xshell prompt.
+[C:\~]$ 
+
+Connecting to 47.97.46.240:22...
+Connection established.
+To escape to local shell, press 'Ctrl+Alt+]'.
+
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-92-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Thu Feb 29 03:59:17 PM CST 2024
+
+  System load:  0.0                Processes:                132
+  Usage of /:   11.4% of 39.01GB   Users logged in:          1
+  Memory usage: 38%                IPv4 address for docker0: 172.17.0.1
+  Swap usage:   0%                 IPv4 address for eth0:    172.24.202.119
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+
+Welcome to Alibaba Cloud Elastic Compute Service !
+
+Last login: Thu Feb 29 15:38:29 2024 from 58.210.190.62
+root@iZbp1e26yt6uzfhbeqg3l0Z:~# sudo systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2024-02-29 13:46:29 CST; 2h 13min ago
+       Docs: man:nginx(8)
+   Main PID: 7299 (nginx)
+      Tasks: 3 (limit: 1939)
+     Memory: 13.4M
+        CPU: 1.233s
+     CGroup: /system.slice/nginx.service
+             ├─7299 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─7300 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             └─7301 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+root@iZbp1e26yt6uzfhbeqg3l0Z:~# whereis nginx
+nginx: /usr/sbin/nginx /usr/lib/nginx /etc/nginx /usr/share/nginx /usr/share/man/man8/nginx.8.gz
+root@iZbp1e26yt6uzfhbeqg3l0Z:~# cd ../etc
+root@iZbp1e26yt6uzfhbeqg3l0Z:/etc# ls
+adduser.conf                   crypttab        hostname         login.defs           networks          rc4.d              sysctl.conf
+adjtime                        dbus-1          hosts            logrotate.conf       newt              rc5.d              sysctl.d
+alternatives                   debconf.conf    hosts.allow      logrotate.d          nftables.conf     rc6.d              sysstat
+apache2                        debian_version  hosts.deny       lsb-release          nginx             rcS.d              systemd
+apparmor                       default         init             lvm                  nsswitch.conf     resolv.conf        terminfo
+apparmor.d                     deluser.conf    init.d           machine-id           ntp.conf          resolvconf         timezone
+apport                         depmod.d        initramfs-tools  magic                opt               rmt                tmpfiles.d
+apt                            dhcp            inputrc          magic.mime           os-release        rpc                tuned
+at.deny                        dnsmasq.d       iproute2         manpath.config       overlayroot.conf  rsyslog.conf       ubuntu-advantage
+bash.bashrc                    docker          iscsi            mdadm                PackageKit        rsyslog.d          ucf.conf
+bash_completion                dpkg            issue            mecabrc              pam.conf          screenrc           udev
+bash_completion.d              e2scrub.conf    issue.net        mime.types           pam.d             security           udisks2
+bindresvport.blacklist         emacs           kdump            mke2fs.conf          passwd            selinux            ufw
+binfmt.d                       environment     kernel           ModemManager         passwd-           sensors3.conf      update-manager
+byobu                          ethertypes      landscape        modprobe.d           perl              sensors.d          update-motd.d
+ca-certificates                fonts           ldap             modules              pki               services           update-notifier
+ca-certificates.conf           fstab           ld.so.cache      modules-load.d       pm                shadow             usb_modeswitch.conf
+ca-certificates.conf.dpkg-old  fuse.conf       ld.so.conf       motd                 polkit-1          shadow-            usb_modeswitch.d
+chrony                         fwupd           ld.so.conf.d     mtab                 pollinate         shells             vim
+cloud                          gai.conf        legal            multipath            ppp               skel               vmware-tools
+cni                            groff           libaudit.conf    multipath.conf       profile           sos                vtrgb
+console-setup                  group           libblockdev      mysql                profile.d         ssh                wgetrc
+cron.d                         group-          libibverbs.d     nanorc               protocols         ssl                X11
+cron.daily                     grub.d          libnl-3          needrestart          python3           subgid             xattr.conf
+cron.hourly                    gshadow         lighttpd         netconfig            python3.10        subuid             xdg
+cron.monthly                   gshadow-        locale.alias     netplan              rc0.d             sudo.conf          yum.repos.d
+crontab                        gss             locale.gen       network              rc1.d             sudoers            zsh_command_not_found
+cron.weekly                    hdparm.conf     localtime        networkd-dispatcher  rc2.d             sudoers.d
+cryptsetup-initramfs           host.conf       logcheck         NetworkManager       rc3.d             sudo_logsrvd.conf
+root@iZbp1e26yt6uzfhbeqg3l0Z:/etc# cd nginx/
+root@iZbp1e26yt6uzfhbeqg3l0Z:/etc/nginx# ls
+cert    fastcgi.conf    koi-utf  mime.types         modules-enabled  proxy_params  sites-available  snippets      win-utf
+conf.d  fastcgi_params  koi-win  modules-available  nginx.conf       scgi_params   sites-enabled    uwsgi_params
+root@iZbp1e26yt6uzfhbeqg3l0Z:/etc/nginx# vim nginx.conf
+
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+        worker_connections 768;
+        # multi_accept on;
+}
+
+http {
+
+        ##
+        # Basic Settings
+        ##
+
+        sendfile on;
+        tcp_nopush on;
+        types_hash_max_size 2048;
+        # server_tokens off;
+
+        # server_names_hash_bucket_size 64;
+        # server_name_in_redirect off;
+
+        include /etc/nginx/mime.types;
+        default_type application/octet-stream;
+
+        ##
+        # SSL Settings
+        ##
+
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE
+        ssl_prefer_server_ciphers on;
+
+        ##
+        # Logging Settings
+        ##
+
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
+
+        ##
+        # Gzip Settings
+        ##
+
+        gzip on;
+
+         gzip_vary on;
+         gzip_proxied any;
+         gzip_comp_level 6;
+         gzip_buffers 16 8k;
+         gzip_http_version 1.1;
+         gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+        ##
+        # Virtual Host Configs
+        ##
+
+        include /etc/nginx/conf.d/*.conf;
+        include /etc/nginx/sites-enabled/*;
+        upstream my_upstream{
+                server 127.0.0.1:3000;
+                keepalive 64;
+        }
+
+
+        server {
+                listen 80;
+                server_name www.myfunction.cn myfunction.cn 47.97.46.240;
+                root /www/dist;
+                location / {
+                        index index.html index.htm;
+                }
+        }
+        server {
+                listen 80;
+                server_name api.myfunction.cn;
+                location / {
+                        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                        proxy_set_header Host $http_host;
+                        proxy_set_header X-NginX-Proxy true;
+                        proxy_http_version 1.1;
+                        proxy_set_header Upgrade $http_upgrade;
+                        proxy_set_header Connection "upgrade";
+                        proxy_max_temp_file_size 0;
+                        proxy_pass http://my_upstream/;
+                        proxy_redirect off;
+                        proxy_read_timeout 240s;
+                        proxy_connect_timeout 300s;
+                }
+
+        }
+
+}
+#mail {
+#       # See sample authentication script at:
+                                                                                                                                   68,11-25      74%

@@ -1,0 +1,54 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.el-button--text {
+  margin-right: 15px;
+}
+.el-select {
+  width: 300px;
+}
+.el-input {
+  width: 300px;
+}
+.dialog-footer button:first-child {
+  margin-right: 10px;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+  
+}
+.grid-content input{
+  width: 150px;
+}
+.demonstration {
+  color: var(--el-text-color-secondary);
+}
+
+.el-carousel__item h3 {
+  color: #475669;
+  opacity: 0.75;
+  line-height: 150px;
+  margin: 0;
+  text-align: center;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
+/* 表单状态颜色 */
+/* .el-table .warning-row {
+  --el-table-tr-bg-color: var(--el-color-warning-light-8);
+}
+.el-table .success-row {
+  --el-table-tr-bg-color: var(--el-color-success-light-8);
+} */

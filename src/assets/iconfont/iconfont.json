@@ -1,0 +1,51 @@
+{
+  "id": "4442554",
+  "name": "网站会员ming'pai",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7171413",
+      "name": "创享钻石",
+      "font_class": "chuangxiangzhizunvip",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7171440",
+      "name": "创享青铜vip1",
+      "font_class": "chuangxiangqingtongvip",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "7171464",
+      "name": "创享白银vip2",
+      "font_class": "chuangxiangbaiyinvip",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "7171471",
+      "name": "创享黄金vip3",
+      "font_class": "chuangxianghuangjinvip",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "7171506",
+      "name": "创享紫金vip2",
+      "font_class": "chuangxiangzijinvip",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "7171653",
+      "name": "创享钻石vip5",
+      "font_class": "chuangxiangzuanshivip",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    }
+  ]
+}
