@@ -12,7 +12,7 @@ Mysql + Node  （ 了解即可 ）
 
 #### 项目地址
 
-https://gitee.com/yu-lang666/memorandum-development.git
+https://github.com/xiupuxie/memorandum.git
 
 #### 项目开发说明
 
